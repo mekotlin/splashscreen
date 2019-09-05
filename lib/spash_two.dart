@@ -2,20 +2,20 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
-class SplashScreen extends StatefulWidget {
-
+class SplashScreenTwo extends StatefulWidget {
   @override
-  _SplashScreenState createState() => _SplashScreenState();
+  _SplashScreenTwoState createState() => _SplashScreenTwoState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
-
+class _SplashScreenTwoState extends State<SplashScreenTwo> {
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(Duration(seconds: 3), ()=>Navigator.pushNamed(context, "/splashtwo"));
+    Timer(Duration(seconds: 3),
+        () => Navigator.pushNamed(context, "/splashthree"));
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,13 +24,13 @@ class _SplashScreenState extends State<SplashScreen> {
         children: <Widget>[
           Container(
             decoration: BoxDecoration(
-              color: Color(0xFFFFC300),
+              color: Color(0xFFFFd300),
               gradient: LinearGradient(
-                  colors: [Color(0xFFFFC300), Color(0xFFde5cbc)],
-                  begin: Alignment.topRight,
-                  end: Alignment.bottomLeft),
+                  colors: [Color(0xFF9966FF), Color(0xFF22DFC0)],
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight),
             ),
-          ),
+          ),  
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -38,7 +38,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 backgroundColor: Colors.white,
                 radius: 75.0,
                 child: Icon(
-                  Icons.phone_android,
+                  Icons.adb,
                   color: Colors.deepOrange,
                   size: 50.0,
                 ),
@@ -47,7 +47,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 padding: EdgeInsets.only(top: 10.0),
               ),
               Text(
-                "Splash Screen One",
+                "Splash Screen Two",
                 style: TextStyle(color: Colors.white, fontSize: 24.0),
               ),
             ],

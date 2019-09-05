@@ -1,21 +1,11 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 
-class SplashScreen extends StatefulWidget {
-
+class SplashThree extends StatefulWidget {
   @override
-  _SplashScreenState createState() => _SplashScreenState();
+  _SplashThreeState createState() => _SplashThreeState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    Timer(Duration(seconds: 3), ()=>Navigator.pushNamed(context, "/splashtwo"));
-  }
+class _SplashThreeState extends State<SplashThree> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
             decoration: BoxDecoration(
               color: Color(0xFFFFC300),
               gradient: LinearGradient(
-                  colors: [Color(0xFFFFC300), Color(0xFFde5cbc)],
+                  colors: [Color(0xFFFF3333), Color(0xFFF58B57)],
                   begin: Alignment.topRight,
                   end: Alignment.bottomLeft),
             ),
@@ -38,7 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 backgroundColor: Colors.white,
                 radius: 75.0,
                 child: Icon(
-                  Icons.phone_android,
+                  Icons.android,
                   color: Colors.deepOrange,
                   size: 50.0,
                 ),
@@ -47,7 +37,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 padding: EdgeInsets.only(top: 10.0),
               ),
               Text(
-                "Splash Screen One",
+                "Splash Screen Three",
                 style: TextStyle(color: Colors.white, fontSize: 24.0),
               ),
             ],
